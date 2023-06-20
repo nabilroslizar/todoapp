@@ -1,6 +1,7 @@
 import React from "react";
 import { getTodos } from "../../../lib/todos";
 import TodoItem from "../component/TodoItem";
+import NewTodoForm from "../component/NewTodoForm";
 
 // const todos = [
 //   {
@@ -19,6 +20,8 @@ const Page = async () => {
   return (
     <div className="container">
       <div className="mt-10 text-2xl font-semibold text-slate-700">Todos</div>
+
+      <NewTodoForm />
       <div className="text-xl font-semibold mt-8 border-b pb-2">
         {" "}
         Previous todo
