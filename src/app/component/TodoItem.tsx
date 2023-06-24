@@ -2,7 +2,7 @@
 
 import { Todo } from "@prisma/client";
 import React, { useTransition } from "react";
-import { updateTodoAction } from "../_action";
+import { updateTodoAction, deleteTodoAction } from "../_action";
 
 type TodoItemProps = {
   todo: Todo;
@@ -12,7 +12,7 @@ const TodoItem = ({ todo }: TodoItemProps) => {
   const [isPending, startTransition] = useTransition();
   return (
     <div className="flex justify-between gap-3 ">
-      <div className="flex gap-2">
+      <div className="flex gap-2 justify-between items-center">
         <input
           type="checkbox"
           id={todo.id}
@@ -30,6 +30,16 @@ const TodoItem = ({ todo }: TodoItemProps) => {
         </label>
         <div className="text-sm peer-checked:line-through">
           {todo.updatedAt.toLocaleString()}
+        </div>
+
+        <div className="">
+          <button
+            id={todo.id}
+            className="rounded-md bg-red-400 text-black px-2 py-1 text-xs"
+            onClick={() => deleteTodoAction(todo.id)}
+          >
+            Delete
+          </button>
         </div>
       </div>
     </div>
