@@ -20,19 +20,19 @@ const NewTodoForm = () => {
 
   return (
     <form action={action} ref={formRef} className="mt-4">
-      <div className="font-semibold">Create a new todo</div>
-      <div className="flex flex-row gap-4">
+      <div className="font-semibold">Create a new task</div>
+      <div className="flex flex-row gap-4 items-center">
         <input
           type="text"
           name="title"
           id="title"
-          className="border rounded-md mt-2 pl-4"
+          className="border border-black rounded-md mt-2 pl-4"
         />
         <button
           type="submit"
-          className="bg-black text-white px-2 py-1 rounded-md text.sm"
+          className="bg-black text-white px-5 py-1 rounded-md text.sm"
         >
-          Add todo
+          Add
         </button>
       </div>
     </form>

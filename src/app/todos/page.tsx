@@ -19,12 +19,14 @@ const Page = async () => {
 
   return (
     <div className="container">
-      <div className="mt-10 text-2xl font-semibold text-slate-700">Todos</div>
+      <div className="mt-10 text-2xl font-semibold text-slate-700">
+        To Do List
+      </div>
 
       <NewTodoForm />
       <div className="text-xl font-semibold mt-8 border-b pb-2">
         {" "}
-        Previous todo
+        My To Do List
       </div>
       <div className="mt-4 flex flex-col gap-1">
         {todos?.map(
